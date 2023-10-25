@@ -1,6 +1,11 @@
+/*
+your css is very fixed sized, try to design your layout in a more responsive manner
+so that when the window is resized the game still fits in the center of the display
+this css creates a very broken layout in any display that isn't the exact same size as yours
+*/
 
 .bgcontainer{
-    width: 690;
+    width: 690; /* no units? */
     height: 800;
     background-color: black;
     margin-top: 100px;
@@ -8,6 +13,12 @@
     align-items: center;
 }
 
+/*
+all containers have the same height/width/background-color
+those should be merged in a single class. you can give your elements multiple classes
+like <div class="container_default container_1"></div>
+though hardcoding margins to element indexes is also not a good idea
+*/
 .container1 {
     height: 150px;
     width: 150px;
@@ -120,6 +131,10 @@
     margin-top: -150px;
     margin-left: 510px;
 }
+
+/*
+again button 1 and 2 have so much in common, there is no need to repeat these in your code
+*/
 .button1 {
     display: flex;
     background-color: #cdd647; 
